@@ -6,13 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class WebhookRequestBody {
-    private String destination;
-    private List<WebhookEvent> events;
+public class WebhookDeliveryContext {
+    private boolean isRedelivery;
 }

@@ -1,17 +1,18 @@
 package com.agungdh.linechat.model;
 
-import lombok.Builder;
-import lombok.Data;
-
-import java.time.Instant;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class WebhookEvent {
     private String type;
     private String mode;
-    private Instant timestamp;
+    private Long timestamp;
     private WebhookEventSource source;
     private String webhookEventId;
-//    private DeliveryContext deliveryContext;
+    private WebhookDeliveryContext deliveryContext;
+    private WebhookMessage message;
 }

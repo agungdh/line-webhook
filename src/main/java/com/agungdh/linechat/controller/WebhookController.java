@@ -51,7 +51,7 @@ public class WebhookController {
 
         log.info("Message received: {} data: {}", xLineSignature, body);
 
-//        webhookService.process(body);
+        webhookService.process(body);
 
         return ResponseEntity.ok().build();
     }
