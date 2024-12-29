@@ -1,12 +1,13 @@
 package com.agungdh.linechat.helper;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
 
-@Service
+@Component
 public class LineSignatureValidator {
     public boolean validateSignature(String channelSecret, String xLineSignature, String body) {
         try {
